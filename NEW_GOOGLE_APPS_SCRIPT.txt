@@ -1,0 +1,30 @@
+// Updated Google Apps Script for Wedding RSVP with Guest Names
+// Copy and paste this entire code into your Google Apps Script editor
+
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = JSON.parse(e.postData.contents);
+
+    // Add a new row with the form data (now includes guest names)
+    sheet.appendRow([
+      new Date(),           // Timestamp
+      data.name,            // Name
+      data.attendance,      // Attendance
+      data.guests,          // Number of Guests
+      data.guestNames,      // Guest Names (NEW COLUMN)
+      data.dietary          // Dietary Restrictions
+    ]);
+
+    // Return success response
+    return ContentService
+      .createTextOutput(JSON.stringify({ success: true }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (error) {
+    // Return error response
+    return ContentService
+      .createTextOutput(JSON.stringify({ success: false, error: error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
