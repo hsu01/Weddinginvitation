@@ -67,7 +67,7 @@ export default function App() {
       <audio
         ref={audioRef}
         loop
-        preload="auto"
+        preload="none"
         playsInline
         className="hidden"
       >

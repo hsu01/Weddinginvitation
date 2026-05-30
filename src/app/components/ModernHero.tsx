@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
-import heroImage from '../../imports/Hein_Soe___Thinzar-94.jpg';
+import heroImage from '../../imports/Hein_Soe___Thinzar-98.jpg';
 
 interface ModernHeroProps {
   onPlayMusic: () => void;
