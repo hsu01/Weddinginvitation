@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
-import heroImage from '../../imports/Hein_Soe___Thinzar-98.jpg';
+import heroImage from '../../imports/Hein_Soe___Thinzar-94.jpg';
 
 interface ModernHeroProps {
   onPlayMusic: () => void;
@@ -16,16 +16,23 @@ export function ModernHero({ onPlayMusic, musicPlaying }: ModernHeroProps) {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.3]);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <motion.div ref={ref} style={{ scale, y }} className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-center blur-xl scale-105"
+        />
+        <img
+          src={heroImage}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-center md:object-contain"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
       </motion.div>
