@@ -4,7 +4,7 @@ import { useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxcsixPw0mfMgq99-ZNklEhhxJgT6RBgO6P7ExP1N7r9CJia2HXY7Xs2I9H_q6cWqm9/exec";
+  "https://script.google.com/macros/s/AKfycbxwZ6hFMX-SLgRvA3UGTbV5yiEclOopSv-dUHCoSFI_QTUSgntHH0gOHfp8QVUTdhRp/exec";
 
 const mealOptions = ["Blacked Salmon, Creole Cream Sauce, Butter Rice, Roasted Broccoli", 
                      "Pork Shoulder, Smashed Sweet Potatoes, Sauteed Greens", 
