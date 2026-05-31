@@ -134,11 +134,12 @@ export function EventDetailsSection() {
               return (
                 <motion.div
                   key={event.title}
-                  initial={{ opacity: 0, y: 35 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.25, margin: '0px 0px -12% 0px' }}
                   transition={{
-                    duration: 0.65,
-                    delay: index * 0.06,
+                    duration: 0.5,
+                    delay: Math.min(index * 0.04, 0.18),
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   className={`relative flex pl-12 md:pl-0 ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}
@@ -154,11 +155,7 @@ export function EventDetailsSection() {
                     <div className={`absolute inset-0 rounded-[28px] bg-gradient-to-br ${event.mood} opacity-95`} />
                     <div className="absolute inset-0 rounded-[28px] bg-black/12" />
 
-                    <motion.div
-                      animate={{ rotate: [0, 8, 0], scale: [1, 1.06, 1] }}
-                      transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
-                      className="absolute -top-12 -right-12 h-36 w-36 rounded-full bg-white/12 blur-2xl"
-                    />
+                    <div className="absolute -top-12 -right-12 h-36 w-36 rounded-full bg-white/12 blur-2xl" />
 
                     <div className="relative z-10 p-6 md:p-7">
                       <div className="mb-3 flex items-end justify-between gap-4">
