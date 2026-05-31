@@ -21,7 +21,7 @@ const events = [
     icon: Wine,
     time: '5:00 PM',
     title: 'Cocktails & Appetizers',
-    description: 'Enjoy cocktails, appetizers, conversations, and beautiful sunset moments.',
+    description: 'Enjoy unlimited alcohols, cocktails, appetizers, conversations, and beautiful sunset moments.',
     mood: 'from-[#D8B4A0] to-[#C88E7B]',
   },
   {

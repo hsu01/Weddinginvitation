@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'venue', label: 'Venue' },
-  { id: 'timeline', label: 'Timeline' },
   { id: 'rsvp', label: 'RSVP' },
+  { id: 'registry', label: 'Registry' },
 ];
 
 export function TopNavbar() {

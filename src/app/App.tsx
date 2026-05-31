@@ -13,6 +13,7 @@ import { RSVPSectionNew } from './components/RSVPSectionNew';
 import { FinalSectionNew } from './components/FinalSectionNew';
 import { MusicPlayerNew } from './components/MusicPlayerNew';
 import { TopNavbar } from './components/TopNavbar';
+import { RegistrySection } from './components/RegistrySection';
 import weddingSong from '../imports/song.mp3';
 
 export default function App() {
@@ -109,6 +110,9 @@ export default function App() {
         </div>
         <div id="rsvp" className="scroll-mt-24">
           <RSVPSectionNew />
+        </div>
+        <div id="registry" className="scroll-mt-24">
+          <RegistrySection />
         </div>
         <div id="final" className="scroll-mt-24">
           <FinalSectionNew />
