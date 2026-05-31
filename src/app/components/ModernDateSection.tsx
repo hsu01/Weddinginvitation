@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import dateImage from '../../imports/Hein_Soe___Thinzar-100.jpg';
+import dateImage from '../../imports/casa-real-1.jpg';
 
 export function ModernDateSection() {
   const ref = useRef(null);

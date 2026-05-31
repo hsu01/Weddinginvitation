@@ -12,6 +12,7 @@ import { GallerySection } from './components/GallerySection';
 import { RSVPSectionNew } from './components/RSVPSectionNew';
 import { FinalSectionNew } from './components/FinalSectionNew';
 import { MusicPlayerNew } from './components/MusicPlayerNew';
+import { TopNavbar } from './components/TopNavbar';
 import weddingSong from '../imports/song.mp3';
 
 export default function App() {
@@ -61,6 +62,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <SnowEffect />
+      <TopNavbar />
       <MusicPlayerNew isPlaying={musicPlaying} onToggle={toggleMusic} />
 
       {/* HTML5 Audio Element - Your Wedding Song */}
@@ -77,19 +79,41 @@ export default function App() {
         />
       </audio>
 
-      <main className="relative">
-            <ModernHero onPlayMusic={handlePlayMusic} musicPlaying={musicPlaying} />
-            <ModernDateSection />
-            <CountdownSection />
-            <UniqueVenueSection />
-            <EventDetailsSection />
-            <ConciseDetails />
-            <RefinedDressCode />
-            <EntourageSection />
-            <GallerySection />
-            <RSVPSectionNew />
-            <FinalSectionNew />
-          </main>
+      <main className="relative pt-16 md:pt-[72px]">
+        <div id="home" className="scroll-mt-24">
+          <ModernHero onPlayMusic={handlePlayMusic} musicPlaying={musicPlaying} />
+        </div>
+        <div id="date" className="scroll-mt-24">
+          <ModernDateSection />
+        </div>
+        <div id="countdown" className="scroll-mt-24">
+          <CountdownSection />
+        </div>
+        <div id="venue" className="scroll-mt-24">
+          <UniqueVenueSection />
+        </div>
+        <div id="timeline" className="scroll-mt-24">
+          <EventDetailsSection />
+        </div>
+        <div id="details" className="scroll-mt-24">
+          <ConciseDetails />
+        </div>
+        <div id="dress-code" className="scroll-mt-24">
+          <RefinedDressCode />
+        </div>
+        <div id="entourage" className="scroll-mt-24">
+          <EntourageSection />
+        </div>
+        <div id="gallery" className="scroll-mt-24">
+          <GallerySection />
+        </div>
+        <div id="rsvp" className="scroll-mt-24">
+          <RSVPSectionNew />
+        </div>
+        <div id="final" className="scroll-mt-24">
+          <FinalSectionNew />
+        </div>
+      </main>
     </div>
   );
 }
