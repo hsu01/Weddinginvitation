@@ -66,13 +66,13 @@ const events = [
   //   description: 'Heartfelt speeches and meaningful words from those closest to us.',
   //   mood: 'from-[#D6BFAF] to-[#B89482]',
   // },
-  {
-    icon: Cake,
-    time: '7:35 PM',
-    title: 'Cake Cutting',
-    description: 'A sweet moment shared together before the dance floor opens.',
-    mood: 'from-[#EBC8C8] to-[#D9A8A8]',
-  },
+  // {
+  //   icon: Cake,
+  //   time: '7:35 PM',
+  //   title: 'Cake Cutting',
+  //   description: 'A sweet moment shared together before the dance floor opens.',
+  //   mood: 'from-[#EBC8C8] to-[#D9A8A8]',
+  // },
   // {
   //   icon: Heart,
   //   time: '7:40 PM',
@@ -82,9 +82,9 @@ const events = [
   // },
   {
     icon: Music2,
-    time: '7:55 PM',
-    title: 'Open Dancing',
-    description: 'Dance, celebrate, laugh, and enjoy the rest of the evening with us.',
+    time: '7:30 PM',
+    title: 'Entertainmet',
+    description: 'Enjoy the entertainment activites, celebrate, laugh, and enjoy the rest of the evening with us.',
     mood: 'from-[#4A2C2A] to-[#2C1817]',
   },
 ];

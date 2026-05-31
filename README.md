@@ -7,11 +7,6 @@ Live website:
 
 This repository is maintained as a customizable wedding microsite template and implementation. It combines editorial storytelling (hero, date, venue, timeline, gallery, final message), interactive guest flows (RSVP), and practical logistics (registry, details, dress code) in one responsive application.
 
-## Who This Repo Is For
-
-- **Developers** who need to customize, extend, or deploy the invitation website.
-- **Project stakeholders** (couple, planners, collaborators) who want to understand what the site includes and how content is structured.
-
 ## What This Project Delivers
 
 - Responsive one-page wedding site with smooth section navigation

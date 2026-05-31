@@ -2,10 +2,12 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import registryImage from '../../imports/Hein_Soe___Thinzar-100.jpg';
+import venmoQr from '../../imports/venmo-qr.jpg';
+import zelleQr from '../../imports/zelle-qr.jpg';
 
 const registry = {
-  venmo: '@[Your Venmo Handle]',
-  zelle: '[Your Email or Phone]',
+  venmo: '@Thinzar_SHtet',
+  zelle: '208-518-6482',
 };
 
 export function RegistrySection() {
@@ -73,6 +75,13 @@ export function RegistrySection() {
                   <p className="font-['Inter'] text-base md:text-[28px] leading-relaxed text-[#5E5249]">
                     We gratefully accept contributions via Venmo at {registry.venmo}.
                   </p>
+                  <div className="mt-5 max-w-[280px] overflow-hidden rounded-2xl border border-[#D9D1C7] bg-white p-2 shadow-sm">
+                    <img
+                      src={venmoQr}
+                      alt="Venmo QR code"
+                      className="h-auto w-full rounded-xl object-cover"
+                    />
+                  </div>
                 </div>
 
                 <div>
@@ -85,6 +94,13 @@ export function RegistrySection() {
                   <p className="font-['Inter'] text-base md:text-[28px] leading-relaxed text-[#5E5249]">
                     If preferred, contributions can also be sent by Zelle to {registry.zelle}.
                   </p>
+                  <div className="mt-5 max-w-[280px] overflow-hidden rounded-2xl border border-[#D9D1C7] bg-white p-2 shadow-sm">
+                    <img
+                      src={zelleQr}
+                      alt="Zelle QR code"
+                      className="h-auto w-full rounded-xl object-cover"
+                    />
+                  </div>
                 </div>
 
                 <div>

@@ -12,6 +12,10 @@ const entourage = [
     names: ["Swe Myint", "Aye Aye Thant"],
   },
   {
+    category: "Maid of Honour & Ring Bearer",
+    names: ["Hsu Wai Hnin Kyaw"],
+  },
+  {
     category: "Groomsmen",
     names: [
       "Win Paing",
@@ -30,10 +34,6 @@ const entourage = [
   {
     category: "Flower Girl",
     names: ["Little Tris Huang"],
-  },
-  {
-    category: "Ring Bearer",
-    names: ["Hsu Wai Hnin Kyaw"],
   },
   {
     category: "MC",
