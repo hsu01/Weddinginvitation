@@ -60,7 +60,7 @@ export function UniqueVenueSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center"
+          className="grid items-start gap-8 lg:grid-cols-5 lg:gap-12"
         >
           {/* Left: Image */}
           <motion.div

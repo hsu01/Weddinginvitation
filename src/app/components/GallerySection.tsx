@@ -21,7 +21,6 @@ interface StoryMilestone {
 interface PreWeddingPhoto {
   image: string;
   alt: string;
-  caption: string;
   className: string;
 }
 
@@ -48,43 +47,36 @@ const preWeddingPhotos: PreWeddingPhoto[] = [
   {
     image: prewed1,
     alt: 'Pre-wedding portrait in winter',
-    caption: 'Proof that love survives winter.',
     className: 'md:col-span-5',
   },
   {
     image: prewed2,
     alt: 'Dramatic pre-wedding portrait',
-    caption: 'She wanted dramatic photos. Mission accomplished.',
     className: 'md:col-span-7',
   },
   {
     image: prewed3,
     alt: 'Outdoor pre-wedding portrait',
-    caption: 'The weather cooperated. Miraculously.',
     className: 'md:col-span-7',
   },
   {
     image: prewed4,
     alt: 'Romantic pre-wedding portrait',
-    caption: "After six years together, he still laughs at her jokes. That's true commitment.",
     className: 'md:col-span-5',
   },
   {
     image: prewed5,
     alt: 'Elegant pre-wedding portrait',
-    caption: 'Romance, but make it look like we did not spend ten minutes fixing the pose.',
     className: 'md:col-span-4',
   },
   {
     image: prewed6,
     alt: 'Joyful pre-wedding portrait',
-    caption: 'The photographer said act natural. This was our most believable attempt.',
     className: 'md:col-span-4',
   },
   {
     image: prewed7,
     alt: 'Classic pre-wedding portrait',
-    caption: 'A soft romantic moment, shortly before someone probably asked where the snacks were.',
     className: 'md:col-span-4',
   },
 ];
@@ -190,7 +182,7 @@ export function GallerySection() {
         <div className="mx-auto mt-14 grid max-w-7xl gap-5 md:grid-cols-12 md:gap-6">
           {preWeddingPhotos.map((photo, index) => (
             <motion.figure
-              key={photo.caption}
+              key={photo.alt}
               initial={{ opacity: 0, y: 34 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -205,33 +197,11 @@ export function GallerySection() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
               </div>
-              <figcaption className="px-1 pb-1 pt-4 font-['Cormorant_Garamond'] text-xl leading-snug text-[#4A3D35] md:text-2xl">
-                {photo.caption}
-              </figcaption>
             </motion.figure>
           ))}
         </div>
       </section>
 
-      <section className="px-6 pb-24 pt-8 text-center md:px-10 md:pb-32">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1.1, ease: softEase }}
-          className="mx-auto max-w-4xl border-y border-[#D8CEC2] py-14"
-        >
-          <p className="font-['Bodoni_Moda'] text-5xl leading-tight text-[#2D241F] sm:text-6xl md:text-7xl">
-            The Adventure Continues
-          </p>
-          <p className="mt-6 font-['Inter'] text-[11px] uppercase tracking-[0.42em] text-[#8B7B6D]">
-            10.31.2026
-          </p>
-          <p className="mx-auto mt-7 max-w-2xl font-['Cormorant_Garamond'] text-2xl leading-relaxed text-[#6F6258] md:text-3xl">
-            We cannot wait to celebrate the beginning of forever with you.
-          </p>
-        </motion.div>
-      </section>
     </section>
   );
 }
