@@ -14,22 +14,22 @@ const venueDetails: VenueDetail[] = [
   {
     icon: Home,
     label: 'Venue',
-    text: 'Outdoor ceremony, indoor reception.',
+    text: 'Our ceremony will take place in the gardens, followed by an evening of food, laughter, and dancing inside.',
   },
   {
     icon: Camera,
     label: 'Photos',
-    text: 'Photobooth with fun props and instant keepsakes.',
+    text: "Don't forget to stop by our photo booth - we can't wait to see your photos!",
   },
   {
     icon: Sun,
     label: 'Weather',
-    text: 'Outdoor setting. Bring a coat or shawl to stay warm.',
+    text: 'Our ceremony will be outdoors. California evenings can get chilly, so a light jacket or shawl is a good idea.',
   },
   {
     icon: Car,
     label: 'Parking',
-    text: 'Ample on-site parking is available.',
+    text: 'Plenty of complimentary parking is available right at the venue.',
   },
 ];
 
@@ -125,19 +125,19 @@ export function UniqueVenueSection() {
               </p>
 
               <h2 className="font-['Bodoni_Moda'] text-4xl sm:text-5xl text-gray-900 leading-tight">
-                Where Love
+                Where Our Forever
                 <br />
-                Meets Wine
+                Begins
               </h2>
 
               <div className="w-12 h-px bg-gray-300" />
 
               <p className="font-['Inter'] text-base text-gray-600 leading-relaxed">
-                Nestled in the heart of Pleasanton's wine country, Casa Real offers stunning vineyard views and elegant gardens—the perfect backdrop for our celebration.
+              We fell in love with Casa Real's beautiful vineyards and gardens, and we're so excited to celebrate our wedding with you in such a special place.
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3">
               {venueDetails.map((detail, index) => {
                 const Icon = detail.icon;
 
@@ -147,16 +147,16 @@ export function UniqueVenueSection() {
                     initial={{ opacity: 0, y: 18 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.55, delay: 0.55 + index * 0.08 }}
-                    className="flex gap-3 border-t border-gray-200 pt-4"
+                    className="aspect-square rounded-2xl border border-[#E8E2D8] bg-[#FAFAF9] p-4 shadow-[0_14px_34px_rgba(45,31,27,0.06)]"
                   >
-                    <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#2D1F1B] text-white">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2D1F1B] text-white">
                       <Icon className="h-4 w-4" strokeWidth={1.6} />
                     </div>
-                    <div>
-                      <h3 className="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.22em] text-gray-900">
+                    <div className="mt-4">
+                      <h3 className="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.22em] text-[#2D1F1B]">
                         {detail.label}
                       </h3>
-                      <p className="mt-1 font-['Inter'] text-sm leading-relaxed text-gray-600">
+                      <p className="mt-2 font-['Inter'] text-[12px] leading-relaxed text-gray-600">
                         {detail.text}
                       </p>
                     </div>
@@ -181,7 +181,7 @@ export function UniqueVenueSection() {
                     Accommodations
                   </p>
                   <p className="mt-2 font-['Inter'] text-sm leading-relaxed text-gray-700">
-                    Hotel recommendations will be sent with your RSVP confirmation.
+                  Traveling from out of town? We'll share our favorite nearby hotel options after you RSVP.
                   </p>
                 </div>
               </div>

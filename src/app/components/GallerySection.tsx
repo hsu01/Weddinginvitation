@@ -5,9 +5,9 @@ import prewed1 from '../../imports/prewed1.jpg';
 import prewed2 from '../../imports/prewed2.jpg';
 import prewed3 from '../../imports/prewed3.jpg';
 import prewed4 from '../../imports/prewed4.jpg';
-import prewed5 from '../../imports/prewed5.jpeg';
-import prewed6 from '../../imports/prewed6.jpeg';
-import prewed7 from '../../imports/prewed7.jpeg';
+import prewed5 from '../../imports/prewed5.jpg';
+import prewed6 from '../../imports/prewed6.jpg';
+import prewed7 from '../../imports/prewed7.jpg';
 
 interface StoryMilestone {
   year: string;
