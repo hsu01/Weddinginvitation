@@ -5,7 +5,6 @@ import { ModernDateSection } from './components/ModernDateSection';
 import { CountdownSection } from './components/CountdownSection';
 import { UniqueVenueSection } from './components/UniqueVenueSection';
 import { EventDetailsSection } from './components/EventDetailsSection';
-import { ConciseDetails } from './components/ConciseDetails';
 import { RefinedDressCode } from './components/RefinedDressCode';
 import { EntourageSection } from './components/EntourageSection';
 import { GallerySection } from './components/GallerySection';
@@ -96,8 +95,11 @@ export default function App() {
         <div id="timeline" className="scroll-mt-24">
           <EventDetailsSection />
         </div>
-        <div id="details" className="scroll-mt-24">
-          <ConciseDetails />
+        <div id="rsvp" className="scroll-mt-24">
+          <RSVPSectionNew />
+        </div>
+        <div id="registry" className="scroll-mt-24">
+          <RegistrySection />
         </div>
         <div id="dress-code" className="scroll-mt-24">
           <RefinedDressCode />
@@ -107,12 +109,6 @@ export default function App() {
         </div>
         <div id="gallery" className="scroll-mt-24">
           <GallerySection />
-        </div>
-        <div id="rsvp" className="scroll-mt-24">
-          <RSVPSectionNew />
-        </div>
-        <div id="registry" className="scroll-mt-24">
-          <RegistrySection />
         </div>
         <div id="final" className="scroll-mt-24">
           <FinalSectionNew />

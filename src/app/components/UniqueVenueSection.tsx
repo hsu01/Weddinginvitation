@@ -1,8 +1,37 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { MapPin, Calendar } from 'lucide-react';
+import { Calendar, Camera, Car, Home, MapPin, Sun, type LucideIcon } from 'lucide-react';
 import venueImage from '../../imports/Hein_Soe___Thinzar-150.jpg';
+
+interface VenueDetail {
+  icon: LucideIcon;
+  label: string;
+  text: string;
+}
+
+const venueDetails: VenueDetail[] = [
+  {
+    icon: Home,
+    label: 'Venue',
+    text: 'Outdoor ceremony, indoor reception.',
+  },
+  {
+    icon: Camera,
+    label: 'Photos',
+    text: 'Photobooth with fun props and instant keepsakes.',
+  },
+  {
+    icon: Sun,
+    label: 'Weather',
+    text: 'Outdoor setting. Bring a coat or shawl to stay warm.',
+  },
+  {
+    icon: Car,
+    label: 'Parking',
+    text: 'Ample on-site parking is available.',
+  },
+];
 
 export function UniqueVenueSection() {
   const ref = useRef(null);
@@ -108,15 +137,54 @@ export function UniqueVenueSection() {
               </p>
             </div>
 
-            {/* Address */}
-            <div className="space-y-2">
-              <p className="font-['Inter'] text-xs tracking-wider uppercase text-gray-500">
-                Address
-              </p>
-              <p className="font-['Inter'] text-sm text-gray-700">
-                410 Vineyard Ave<br />
-                Pleasanton, CA 94566
-              </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {venueDetails.map((detail, index) => {
+                const Icon = detail.icon;
+
+                return (
+                  <motion.div
+                    key={detail.label}
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.55, delay: 0.55 + index * 0.08 }}
+                    className="flex gap-3 border-t border-gray-200 pt-4"
+                  >
+                    <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#2D1F1B] text-white">
+                      <Icon className="h-4 w-4" strokeWidth={1.6} />
+                    </div>
+                    <div>
+                      <h3 className="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.22em] text-gray-900">
+                        {detail.label}
+                      </h3>
+                      <p className="mt-1 font-['Inter'] text-sm leading-relaxed text-gray-600">
+                        {detail.text}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            <div className="border-t border-gray-200 pt-5">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <p className="font-['Inter'] text-[10px] uppercase tracking-[0.22em] text-gray-500">
+                    Address
+                  </p>
+                  <p className="mt-2 font-['Inter'] text-sm leading-relaxed text-gray-700">
+                    410 Vineyard Ave<br />
+                    Pleasanton, CA 94566
+                  </p>
+                </div>
+                <div>
+                  <p className="font-['Inter'] text-[10px] uppercase tracking-[0.22em] text-gray-500">
+                    Accommodations
+                  </p>
+                  <p className="mt-2 font-['Inter'] text-sm leading-relaxed text-gray-700">
+                    Hotel recommendations will be sent with your RSVP confirmation.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Actions */}

@@ -98,7 +98,7 @@ export function EventDetailsSection() {
   });
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-32 bg-gradient-to-b from-[#F8F6F2] via-[#F4EFE9] to-[#EFE7DF]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#F8F6F2] via-[#F4EFE9] to-[#EFE7DF] px-0 pb-10 pt-20 md:pb-14 md:pt-28">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#D4A574]/10 blur-3xl rounded-full" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-5 md:px-8">
@@ -178,27 +178,6 @@ export function EventDetailsSection() {
             })}
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.9, delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <div className="max-w-3xl mx-auto bg-white/55 backdrop-blur-md border border-white/60 rounded-[32px] p-8 md:p-10 shadow-xl">
-            <p className="font-['Inter'] uppercase tracking-[0.35em] text-[11px] text-[#8B7B6D] mb-4">
-              Celebration Continues
-            </p>
-
-            <h3 className="font-['Playfair_Display'] text-4xl md:text-5xl text-[#2D1F1B] mb-4">
-              Dance The Night Away
-            </h3>
-
-            <p className="font-['Cormorant_Garamond'] text-2xl text-[#6A5A4E] leading-relaxed">
-              Thank you for being part of our story and celebrating this unforgettable evening with us.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
