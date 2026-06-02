@@ -32,7 +32,7 @@ export function ModernHero({ onPlayMusic, musicPlaying }: ModernHeroProps) {
         <img
           src={heroImage}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-center md:object-contain"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
       </motion.div>
