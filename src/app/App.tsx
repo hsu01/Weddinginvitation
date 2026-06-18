@@ -27,6 +27,32 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const stopMusic = () => {
+      if (!audioRef.current) return;
+
+      audioRef.current.pause();
+      setMusicPlaying(false);
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopMusic();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('pagehide', stopMusic);
+    window.addEventListener('beforeunload', stopMusic);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('pagehide', stopMusic);
+      window.removeEventListener('beforeunload', stopMusic);
+      stopMusic();
+    };
+  }, []);
+
   const handlePlayMusic = async () => {
     if (!audioRef.current) return;
 
