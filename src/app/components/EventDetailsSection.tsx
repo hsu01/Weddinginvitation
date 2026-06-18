@@ -1,11 +1,11 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Camera, Music2, Sparkles, Cake, GlassWater, Heart, Wine } from 'lucide-react';
+import { Camera, Music2, Sparkles, Cake, GlassWater, Heart, Wine, Mic } from 'lucide-react';
 
 const events = [
   {
     icon: GlassWater,
-    time: '3:30 PM',
+    time: '4:00 PM',
     title: 'Guests Arrival',
     description: 'Welcome drinks, soft music, and seating before the ceremony begins.',
     mood: 'from-[#D9C7B8] to-[#C7B1A0]',
@@ -14,28 +14,28 @@ const events = [
     icon: Heart,
     time: '4:30 PM',
     title: 'Wedding Ceremony',
-    description: 'Join us as we exchange vows surrounded by snowy mountains and loved ones.',
+    description: 'Join us as we exchange vows in the sun garden.',
     mood: 'from-[#B7C9D6] to-[#8DA9BA]',
   },
   {
     icon: Wine,
     time: '5:00 PM',
-    title: 'Cocktails & Appetizers',
-    description: 'Enjoy unlimited alcohols, cocktails, appetizers, conversations, and beautiful sunset moments.',
+    title: 'Cocktail Hour',
+    description: 'Enjoy unlimited alcohols, cocktails, appetizers, and conversations.',
     mood: 'from-[#D8B4A0] to-[#C88E7B]',
   },
   {
     icon: Sparkles,
     time: '6:00 PM',
     title: 'Reception Begins',
-    description: 'Guests will be seated as the evening celebration officially begins.',
+    description: 'Guests will be seated indoor as the evening celebration officially begins.',
     mood: 'from-[#B8C5B1] to-[#8CA384]',
   },
   {
-    icon: Wine,
-    time: '6:10 PM',
-    title: 'Introductions & Blessing',
-    description: 'A warm welcome followed by blessings, speeches, and heartfelt moments.',
+    icon: Mic,
+    time: '6:15 PM',
+    title: 'Welcome Speech & Introductions',
+    description: 'Welcome remarks, family introductions, and the opening of the evening reception.',
     mood: 'from-[#D4A574] to-[#B8967D]',
   },
   // {
@@ -47,32 +47,39 @@ const events = [
   // },
   {
     icon: Wine,
-    time: '7:00 PM',
+    time: '6:30 PM',
     title: 'Dinner Service',
     description: 'A curated dinner experience shared with family and friends.',
     mood: 'from-[#8B4545] to-[#5E2F2F]',
   },
-  // {
-  //   icon: GlassWater,
-  //   time: '7:15 PM',
-  //   title: 'Champagne Toast',
-  //   description: 'Raise a glass with us as we celebrate love, joy, and new beginnings.',
-  //   mood: 'from-[#E3C9A8] to-[#D4A574]',
-  // },
-  // {
-  //   icon: Sparkles,
-  //   time: '7:25 PM',
-  //   title: 'Toasts',
-  //   description: 'Heartfelt speeches and meaningful words from those closest to us.',
-  //   mood: 'from-[#D6BFAF] to-[#B89482]',
-  // },
-  // {
-  //   icon: Cake,
-  //   time: '7:35 PM',
-  //   title: 'Cake Cutting',
-  //   description: 'A sweet moment shared together before the dance floor opens.',
-  //   mood: 'from-[#EBC8C8] to-[#D9A8A8]',
-  // },
+  {
+    icon: Music2,
+    time: '6:45 PM',
+    title: 'First Dance',
+    description: 'The bride and groom share their first dance as newlyweds.',
+    mood: 'from-[#E3C9A8] to-[#D4A574]',
+  },
+ {
+    icon: Sparkles,
+    time: '7:00 PM',
+    title: 'Toasts & Blessings',
+    description: 'Raise a glass with us as we celebrate love, joy, and new beginnings.',
+    mood: 'from-[#D6BFAF] to-[#B89482]',
+  },
+  {
+    icon: Music2,
+    time: '7:30 PM',
+    title: 'Entertainment',
+    description: 'Enjoy the special performance prepared by bride and groom.',
+    mood: 'from-[#4A2C2A] to-[#2C1817]',
+  },
+  {
+    icon: Cake,
+    time: '8:00 PM',
+    title: 'Cake Cutting & Bouquet Toss',
+    description: 'A sweet moment shared together before the dance floor opens.',
+    mood: 'from-[#EBC8C8] to-[#D9A8A8]',
+  },
   // {
   //   icon: Heart,
   //   time: '7:40 PM',
@@ -80,13 +87,7 @@ const events = [
   //   description: 'Our first dance together as husband and wife under the evening lights.',
   //   mood: 'from-[#6B7A8F] to-[#4A5568]',
   // },
-  {
-    icon: Music2,
-    time: '7:30 PM',
-    title: 'Entertainmet',
-    description: 'Enjoy the entertainment activites, celebrate, laugh, and enjoy the rest of the evening with us.',
-    mood: 'from-[#4A2C2A] to-[#2C1817]',
-  },
+  
 ];
 
 export function EventDetailsSection() {
@@ -125,7 +126,7 @@ export function EventDetailsSection() {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-[23px] md:left-1/2 top-3 bottom-3 w-[1px] bg-[#D8CFC7]" />
+          <div className="absolute left-[23px] lg:left-1/2 top-3 bottom-3 w-[1px] bg-[#D8CFC7]" />
 
           <div className="space-y-5 md:space-y-6">
             {events.map((event, index) => {
@@ -142,15 +143,15 @@ export function EventDetailsSection() {
                     delay: Math.min(index * 0.04, 0.18),
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className={`relative flex pl-12 md:pl-0 ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}
+                  className={`relative flex pl-12 lg:pl-0 ${index % 2 === 0 ? 'lg:justify-start' : 'lg:justify-end'}`}
                 >
-                  <div className="absolute left-0 md:left-1/2 top-7 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/70 bg-white/60 shadow-lg backdrop-blur-sm">
+                  <div className="absolute left-0 lg:left-1/2 top-7 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/70 bg-white/60 shadow-lg backdrop-blur-sm">
                     <Icon className="h-5 w-5 text-[#7A5D49]" />
                   </div>
 
                   <motion.div
                     whileHover={{ y: -4, scale: 1.01 }}
-                    className="group relative w-full md:w-[46%]"
+                    className="group relative w-full lg:w-[46%]"
                   >
                     <div className={`absolute inset-0 rounded-[28px] bg-gradient-to-br ${event.mood} opacity-95`} />
                     <div className="absolute inset-0 rounded-[28px] bg-black/12" />
@@ -158,12 +159,12 @@ export function EventDetailsSection() {
                     <div className="absolute -top-12 -right-12 h-36 w-36 rounded-full bg-white/12 blur-2xl" />
 
                     <div className="relative z-10 p-6 md:p-7">
-                      <div className="mb-3 flex items-end justify-between gap-4">
-                        <h3 className="font-['Playfair_Display'] text-[30px] md:text-[34px] leading-tight text-white">
+                      <div className="mb-3 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4">
+                        <h3 className="min-w-0 font-['Playfair_Display'] text-[26px] md:text-[30px] leading-tight text-white">
                           {event.title}
                         </h3>
 
-                        <p className="shrink-0 font-['Cormorant_Garamond'] text-[28px] md:text-[32px] leading-none text-white/95">
+                        <p className="whitespace-nowrap font-['Cormorant_Garamond'] text-[28px] md:text-[32px] leading-none text-white/95">
                           {event.time}
                         </p>
                       </div>

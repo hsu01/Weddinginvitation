@@ -3,7 +3,6 @@ import { useInView } from 'motion/react';
 import { useRef } from 'react';
 
 const colorPalette = [
-  { name: 'Champagne', hex: '#E8DCC4', contrast: 'text-gray-800' },
   { name: 'Dusty Rose', hex: '#D4A5A5', contrast: 'text-white' },
   { name: 'Sage', hex: '#B8C5B0', contrast: 'text-gray-800' },
   { name: 'Taupe', hex: '#C4B5A0', contrast: 'text-white' },
@@ -99,7 +98,7 @@ export function RefinedDressCode() {
                 For Him
               </h3>
               <p className="font-['Inter'] text-sm text-gray-600 leading-relaxed">
-                Suit or dress shirt with slacks; tie optional
+                Suit or dress shirt with slacks and ties are optional
               </p>
             </div>
           </motion.div>
@@ -113,7 +112,7 @@ export function RefinedDressCode() {
           >
             <div className="inline-block bg-white border border-gray-200 rounded-sm px-8 py-4 shadow-sm">
               <p className="font-['Inter'] text-sm text-gray-600 italic">
-                Please avoid wearing white or ivory
+              We kindly ask that guests avoid white or ivory attire.
               </p>
             </div>
           </motion.div>

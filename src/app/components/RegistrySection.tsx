@@ -67,6 +67,15 @@ export function RegistrySection() {
               <div className="space-y-8 border-t border-[#D9D1C7] pt-7">
                 <div>
                   <p className="font-['Inter'] text-xs tracking-[0.18em] uppercase text-[#9B9188] mb-3">
+                    In-Person Gifts
+                  </p>
+                  <p className="font-['Inter'] text-base leading-relaxed text-[#5E5249] md:text-lg">
+                    For guests who prefer to give in person, a designated card box will be available at the venue during the reception.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-['Inter'] text-xs tracking-[0.18em] uppercase text-[#9B9188] mb-3">
                     For U.S. Guests
                   </p>
                   <h3 className="mb-3 font-['Inter'] text-2xl font-semibold text-[#3C3129]">

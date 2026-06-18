@@ -137,34 +137,6 @@ export function UniqueVenueSection() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
-              {venueDetails.map((detail, index) => {
-                const Icon = detail.icon;
-
-                return (
-                  <motion.div
-                    key={detail.label}
-                    initial={{ opacity: 0, y: 18 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.55, delay: 0.55 + index * 0.08 }}
-                    className="aspect-square rounded-2xl border border-[#E8E2D8] bg-[#FAFAF9] p-4 shadow-[0_14px_34px_rgba(45,31,27,0.06)]"
-                  >
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2D1F1B] text-white">
-                      <Icon className="h-4 w-4" strokeWidth={1.6} />
-                    </div>
-                    <div className="mt-4">
-                      <h3 className="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.22em] text-[#2D1F1B]">
-                        {detail.label}
-                      </h3>
-                      <p className="mt-2 font-['Inter'] text-[12px] leading-relaxed text-gray-600">
-                        {detail.text}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-
             <div className="border-t border-gray-200 pt-5">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
@@ -176,14 +148,14 @@ export function UniqueVenueSection() {
                     Pleasanton, CA 94566
                   </p>
                 </div>
-                <div>
+                {/* <div>
                   <p className="font-['Inter'] text-[10px] uppercase tracking-[0.22em] text-gray-500">
                     Accommodations
                   </p>
                   <p className="mt-2 font-['Inter'] text-sm leading-relaxed text-gray-700">
                   Traveling from out of town? We'll share our favorite nearby hotel options after you RSVP.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -209,6 +181,34 @@ export function UniqueVenueSection() {
               </motion.button>
             </div>
           </motion.div>
+
+          <div className="grid grid-cols-2 gap-3 lg:col-span-5 lg:grid-cols-4">
+            {venueDetails.map((detail, index) => {
+              const Icon = detail.icon;
+
+              return (
+                <motion.div
+                  key={detail.label}
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.55, delay: 0.55 + index * 0.08 }}
+                  className="rounded-2xl border border-[#E8E2D8] bg-[#FAFAF9] p-4 shadow-[0_14px_34px_rgba(45,31,27,0.06)] sm:aspect-square lg:aspect-auto lg:min-h-[170px]"
+                >
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2D1F1B] text-white">
+                    <Icon className="h-4 w-4" strokeWidth={1.6} />
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.22em] text-[#2D1F1B]">
+                      {detail.label}
+                    </h3>
+                    <p className="mt-2 font-['Inter'] text-[12px] leading-relaxed text-gray-600">
+                      {detail.text}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </motion.div>
       </div>
     </section>
