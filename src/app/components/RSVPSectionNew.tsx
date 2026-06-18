@@ -304,13 +304,13 @@ function PartyStep({
           label="First Name"
           value={formData.firstName}
           onChange={(value) => updatePrimaryName("firstName", value)}
-          placeholder="Hein"
+          placeholder="Your first name"
         />
         <TextField
           label="Last Name"
           value={formData.lastName}
           onChange={(value) => updatePrimaryName("lastName", value)}
-          placeholder="Soe"
+          placeholder="Your last name"
         />
       </div>
 
