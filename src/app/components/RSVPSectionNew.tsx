@@ -8,7 +8,7 @@ const GOOGLE_SCRIPT_URL =
 
 const mealOptions = ["Blacked Salmon, Creole Cream Sauce, Butter Rice, Roasted Broccoli", 
                      "Pork Shoulder, Smashed Sweet Potatoes, Sauteed Greens", 
-                     "Thai Coconut Curry - Basmati Rice, Sweet Potato, Broccolini, Cirspy Chickpeas, Green Onion (Vegetarian)"];
+                     "Thai Coconut Curry - Basmati Rice, Sweet Potato, Broccolini, Crispy Chickpeas, Green Onion (Vegetarian)"];
 
 type Step = 0 | 1 | 2;
 
