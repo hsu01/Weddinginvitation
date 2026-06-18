@@ -3,6 +3,7 @@ import { useInView } from 'motion/react';
 import { useRef } from 'react';
 
 const colorPalette = [
+  { name: 'Lilac', hex: '#CBBBD8', contrast: 'text-white' },
   { name: 'Dusty Rose', hex: '#D4A5A5', contrast: 'text-white' },
   { name: 'Sage', hex: '#B8C5B0', contrast: 'text-gray-800' },
   { name: 'Taupe', hex: '#C4B5A0', contrast: 'text-white' },
@@ -10,6 +11,7 @@ const colorPalette = [
   { name: 'Mauve', hex: '#C9ADA7', contrast: 'text-white' },
   { name: 'Stone', hex: '#D5C9B1', contrast: 'text-gray-800' },
   { name: 'Terracotta', hex: '#C8897C', contrast: 'text-white' },
+  
 ];
 
 export function RefinedDressCode() {
