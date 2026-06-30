@@ -56,7 +56,7 @@ export function ModernHero({ onPlayMusic, musicPlaying }: ModernHeroProps) {
             className="inline-block"
           >
             <div className="px-6 py-2 border border-white/30 backdrop-blur-sm bg-white/10 rounded-full">
-              <p className="font-['Inter'] text-[10px] tracking-[0.4em] text-white uppercase">
+              <p className="font-['Inter'] text-[15px] tracking-[0.4em] text-white uppercase">
                 October 31, 2026
               </p>
             </div>
@@ -71,7 +71,7 @@ export function ModernHero({ onPlayMusic, musicPlaying }: ModernHeroProps) {
               className="font-['Bodoni_Moda'] text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-none tracking-tight"
               style={{ fontWeight: 400 }}
             >
-              Hein Soe
+              Thinzar Swe Htet
             </motion.h1>
 
             <motion.div
@@ -90,7 +90,7 @@ export function ModernHero({ onPlayMusic, musicPlaying }: ModernHeroProps) {
               className="font-['Bodoni_Moda'] text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-none tracking-tight"
               style={{ fontWeight: 400 }}
             >
-              Thinzar Swe Htet
+              Hein Soe
             </motion.h1>
           </div>
 
