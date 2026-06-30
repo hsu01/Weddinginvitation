@@ -62,35 +62,36 @@ export function ModernHero({ onPlayMusic, musicPlaying }: ModernHeroProps) {
             </div>
           </motion.div>
 
-          {/* Names with Glass Morphism */}
-          <div className="space-y-4">
+          {/* Names */}
+          <div className="space-y-3">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="font-['Bodoni_Moda'] text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-none tracking-tight"
+              className="font-['Bodoni_Moda'] text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[7rem] text-white leading-none tracking-tight"
               style={{ fontWeight: 400 }}
             >
-              Thinzar Swe Htet
+              Thinzar
             </motion.h1>
 
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 1, delay: 0.9 }}
-              className="flex justify-center"
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.1, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              className="font-['Bodoni_Moda'] text-[2.75rem] sm:text-[3.75rem] md:text-[4.75rem] lg:text-[6rem] text-white leading-none tracking-tight"
+              style={{ fontWeight: 400 }}
             >
-              <div className="w-32 h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-            </motion.div>
+              &amp;
+            </motion.p>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="font-['Bodoni_Moda'] text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-none tracking-tight"
+              transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="font-['Bodoni_Moda'] text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[7rem] text-white leading-none tracking-tight"
               style={{ fontWeight: 400 }}
             >
-              Hein Soe
+              Hein
             </motion.h1>
           </div>
 
@@ -99,7 +100,7 @@ export function ModernHero({ onPlayMusic, musicPlaying }: ModernHeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 1.2 }}
-            className="font-['Inter'] text-xs sm:text-sm tracking-[0.3em] text-white/80 uppercase pt-8"
+            className="font-['Inter'] text-sm sm:text-base tracking-[0.3em] text-white/80 uppercase pt-8"
           >
             Request the honor of your presence
           </motion.p>
