@@ -3,7 +3,8 @@
 A production-ready, single-page wedding invitation experience built with React, TypeScript, and Vite.
 
 Live website:
-- https://heinandthinzar.vercel.app/
+- https://thinzarandhein.com
+- https://thinzarandhein.vercel.app/
 
 This repository is maintained as a customizable wedding microsite template and implementation. It combines editorial storytelling (hero, date, venue, timeline, gallery, final message), interactive guest flows (RSVP), and practical logistics (registry, details, dress code) in one responsive application.
 
